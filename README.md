@@ -112,7 +112,9 @@ We highly recommend referencing the [OMGM](https://github.com/ChaoLinAViy/OMGM),
 
 ### 2. Build FAISS Indices
 
-We provide pre-built FAISS indices, or you can build them from scratch using our code:
+We use pre-built FAISS indices from both [EchoSight](https://github.com/Go2Heart/EchoSight) and [OMGM](https://github.com/ChaoLinAViy/OMGM).
+For Title based index, we will release after double-blind review.
+Or you can build them from scratch using our code:
 
 ```bash
 cd faiss_build
