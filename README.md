@@ -119,30 +119,19 @@ Or you can build them from scratch using our code:
 ```bash
 cd faiss_build
 
-# Build image index
-python faiss_build.py \
-    --mode image \
-    --knowledge_base ../vqa_data/evqa_kb/encyclopedic_kb_wiki.json \
-    --output_index ../vqa_data/evqa_image_index/
-
 # Build text index
 python faiss_build.py \
     --mode title \
     --knowledge_base ../vqa_data/evqa_kb/encyclopedic_kb_wiki.json \
     --output_index ../vqa_data/evqa_title.index
 
-# Build summary index
-python faiss_build.py \
-    --mode summary \
-    --knowledge_base ../vqa_data/evqa_kb/encyclopedic_kb_wiki.json \
-    --output_index ../vqa_data/evqa_summary_llama3.index
 ```
 
 ## Usage
 
 ### Complete Pipeline
 
-#### 1. Stage 1: SCAR Coarse Retrieval 
+#### Stage 1: SCAR Coarse Retrieval 
 
 Take E-VQA as example.
 
@@ -152,7 +141,7 @@ SCAR performs structure-aware multi-view retrieval by combining title, summary, 
 bash scripts/retrieval/ours_evqa.sh
 ```
 
-#### 2. Stage 2: Fine-grained Reranking
+#### [Optional] Stage 2: Fine-grained Reranking
 We use the reranker models and pre-trained weights provided by OMGM. Please activate the reranking environment and download the reranker weights from the links provided in [OMGM repository](https://github.com/ChaoLinAViy/OMGM/tree/master).
 
 ```bash
